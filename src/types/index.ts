@@ -11,6 +11,7 @@ export interface AxiosRequestConfig {
   method?: Method,
   data?: any,
   params?: any,
+  headers?:any,
   // responseType:XMLHttpRequestResponseType
 }
 

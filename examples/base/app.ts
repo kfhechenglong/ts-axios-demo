@@ -43,3 +43,32 @@ axios({
   url:'/base/buffer',
   data:arr
 })
+
+axios({
+  method:'post',
+  url:'/base/post',
+  data:{
+    a:2,
+    c:3
+  }
+})
+
+axios({
+  method:'post',
+  url:'/base/post',
+  headers:{
+    'content-type':'application/json',
+    'Accept':'application/json, text/plain,*/*'
+  },
+  data:{
+    a:4,
+    b:5
+  }
+})
+const paramsString = 'q=asdsadASS.DSD=api';
+const searchParams = new URLSearchParams(paramsString);
+axios({
+  method:'post',
+  url:'/base/post',
+  data:searchParams
+})
