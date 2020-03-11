@@ -27,7 +27,7 @@ function transformHeaders(config: AxiosRequestConfig): any {
   return processHeaders(headers, data)
 }
 
-function transfromResponseData(res:any) :AxiosResponse{
+function transfromResponseData(res:AxiosResponse) :AxiosResponse{
   res.data = transformResponse(res.data);
   return res;
 }
