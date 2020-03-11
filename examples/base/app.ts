@@ -5,7 +5,9 @@ axios({
   params:{
     foo:['bar','baz']
   }
-})
+}).then((res) => {
+  console.log(res)
+});
 axios({
   method:'get',
   url:'/base/get',
@@ -42,7 +44,9 @@ axios({
   method:'post',
   url:'/base/buffer',
   data:arr
-})
+}).then((res) => {
+  console.log(res)
+});
 
 axios({
   method:'post',

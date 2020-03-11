@@ -12,7 +12,7 @@ export interface AxiosRequestConfig {
   data?: any,
   params?: any,
   headers?:any,
-  // responseType:XMLHttpRequestResponseType
+  responseType?:XMLHttpRequestResponseType
 }
 
 // 定义接口的响应类型
