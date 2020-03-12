@@ -11,7 +11,6 @@ export default class Axiso {
     } else {
       config = url
     }
-
     return dispatchRequest(config);
   }
   get(url:string,config?:AxiosRequestConfig):AxiosPromise {
