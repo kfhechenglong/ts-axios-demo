@@ -7,7 +7,16 @@ var dispatchRequest_1 = __importDefault(require("./dispatchRequest"));
 var Axiso = /** @class */ (function () {
     function Axiso() {
     }
-    Axiso.prototype.request = function (config) {
+    Axiso.prototype.request = function (url, config) {
+        if (typeof url === 'string') {
+            if (!config) {
+                config = {};
+            }
+            config.url = url;
+        }
+        else {
+            config = url;
+        }
         return dispatchRequest_1.default(config);
     };
     Axiso.prototype.get = function (url, config) {
