@@ -34,7 +34,7 @@ function buildURL(url, params) {
             if (util_1.isDate(val)) {
                 val = val.toISOString();
             }
-            else if (util_1.isObject(val)) {
+            else if (util_1.isPlainObject(val)) {
                 val = JSON.stringify(val);
             }
             parts.push(encode(key) + "=" + encode(val));

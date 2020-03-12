@@ -9,3 +9,7 @@ function isObject(val) {
     return val !== null && typeof val === 'object';
 }
 exports.isObject = isObject;
+function isPlainObject(val) {
+    return toString.call(val) === '[object Object]';
+}
+exports.isPlainObject = isPlainObject;
