@@ -13,3 +13,11 @@ function isPlainObject(val) {
     return toString.call(val) === '[object Object]';
 }
 exports.isPlainObject = isPlainObject;
+function extend(to, from) {
+    for (var key in from) {
+        ;
+        to[key] = from[key];
+    }
+    return to;
+}
+exports.extend = extend;
