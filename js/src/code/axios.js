@@ -41,10 +41,10 @@ var Axiso = /** @class */ (function () {
         return this._requestMethodWithData('patch', url, data, config);
     };
     Axiso.prototype._requestMethodWithoutData = function (method, url, config) {
-        return this.request(Object.assign(config || {}, method, url));
+        return this.request(Object.assign(config || {}, { method: method, url: url }));
     };
     Axiso.prototype._requestMethodWithData = function (method, url, data, config) {
-        return this.request(Object.assign(config || {}, method, url, data));
+        return this.request(Object.assign(config || {}, { method: method, url: url, data: data }));
     };
     return Axiso;
 }());

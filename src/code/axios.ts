@@ -37,9 +37,9 @@ export default class Axiso {
   }
 
   _requestMethodWithoutData(method:Method,url:string,config?:AxiosRequestConfig) {
-    return this.request(Object.assign(config || {},method,url))
+    return this.request(Object.assign(config || {},{method,url}))
   }
   _requestMethodWithData(method:Method,url:string,data?:any,config?:AxiosRequestConfig) {
-    return this.request(Object.assign(config || {},method,url,data))
+    return this.request(Object.assign(config || {},{method,url,data}))
   }
 }
